@@ -7,7 +7,7 @@
 
 import Foundation
 
-public final class FeedCachePolicy {
+private final class FeedCachePolicy {
     private let currentDate: () -> Date
     private let calendar = Calendar(identifier: .gregorian)
 
