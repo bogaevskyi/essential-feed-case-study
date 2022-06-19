@@ -153,9 +153,9 @@ class CodableFeedStoreTests: XCTestCase {
     }
     
     private func testSpecificStoreURL() -> URL {
-        FileManager.default.urls(
-            for: .cachesDirectory,
-            in: .userDomainMask
-        ).first!.appendingPathComponent("\(type(of: self)).store")
+        FileManager.default
+            .urls(for: .cachesDirectory, in: .userDomainMask)
+            .first!
+            .appendingPathComponent("\(type(of: self)).store")
     }
 }
