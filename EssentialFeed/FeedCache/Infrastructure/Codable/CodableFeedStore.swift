@@ -67,15 +67,12 @@ public class CodableFeedStore: FeedStore {
     public func insert(_ feed: [LocalFeedImage], timestamp: Date, completion: @escaping InsertionCompletion) {
         let storeURL = storeURL
         queue.async(flags: .barrier) {        
-            do {
+            completion(Result {
                 let encoder = JSONEncoder()
                 let cache = Cache(feed: feed.map(CodabelFeedImage.init), timestamp: timestamp)
                 let encoded = try encoder.encode(cache)
                 try encoded.write(to: storeURL)
-                completion(nil)
-            } catch {
-                completion(error)
-            }
+            })
         }
     }
     
@@ -83,15 +80,12 @@ public class CodableFeedStore: FeedStore {
         let storeURL = storeURL
         queue.async(flags: .barrier) {
             guard FileManager.default.fileExists(atPath: storeURL.path) else {
-                return completion(nil)
+                return completion(.success(()))
             }
-            
-            do {
+
+            completion(Result {
                 try FileManager.default.removeItem(at: storeURL)
-                completion(nil)
-            } catch {
-                completion(error)
-            }
+            })
         }
     }
 }
