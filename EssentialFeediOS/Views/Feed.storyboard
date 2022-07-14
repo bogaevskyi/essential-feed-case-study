@@ -26,7 +26,7 @@
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedImageCell" rowHeight="510" id="qmG-Tx-JLs" customClass="FeedImageCell" customModule="Prototype" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedImageCell" rowHeight="510" id="qmG-Tx-JLs" customClass="FeedImageCell" customModule="EssentialFeediOS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="60.5" width="414" height="510"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qmG-Tx-JLs" id="as6-nC-nyc">
@@ -70,13 +70,16 @@
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Iuj-O3-oKA">
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="374"/>
                                                         </imageView>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XmP-EW-Dy5">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XmP-EW-Dy5" userLabel="Retry">
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="374"/>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="plain" image="arrow.clockwise" catalog="system">
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="40" weight="semibold"/>
                                                                 <color key="baseForegroundColor" red="0.89019607840000003" green="0.89019607840000003" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </buttonConfiguration>
+                                                            <connections>
+                                                                <action selector="retryButtonTapped" destination="qmG-Tx-JLs" eventType="touchUpInside" id="GTw-Xu-Qsd"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.89019607840000003" green="0.89019607840000003" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -117,6 +120,14 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="Zm8-Tg-rJ1" secondAttribute="bottom" priority="999" constant="6" id="z1w-Yt-rxQ"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="baf-gr-IjW" id="QDF-Ju-ZaV"/>
+                                    <outlet property="feedImageContainer" destination="Tfw-xR-XBP" id="gVB-hv-Dju"/>
+                                    <outlet property="feedImageRetryButton" destination="XmP-EW-Dy5" id="3MF-Nx-HwN"/>
+                                    <outlet property="feedImageView" destination="Iuj-O3-oKA" id="3E0-HC-1la"/>
+                                    <outlet property="locationContainer" destination="fcB-6H-9cd" id="0D7-KW-HmE"/>
+                                    <outlet property="locationLabel" destination="zYV-Pp-iJ8" id="h8h-5Q-HvF"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

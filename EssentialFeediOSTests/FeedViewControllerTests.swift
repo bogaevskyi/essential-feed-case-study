@@ -232,11 +232,22 @@ final class FeedViewControllerTests: XCTestCase {
         loader.completeFeedLoading(with: [image0, image1])
         XCTAssertEqual(loader.cancelledImageURLs, [], "Expected no cancelled image URL requests until image is not near visible")
         
-        sut.simulateFeedImageViewNotNearVisible(at: 0)
+        sut.simulateFeedImageViewNotVisible(at: 0)
         XCTAssertEqual(loader.cancelledImageURLs, [image0.url], "Expected first cancelled image URL request once first image is not near visible anymore")
         
         sut.simulateFeedImageViewNotNearVisible(at: 1)
         XCTAssertEqual(loader.cancelledImageURLs, [image0.url, image1.url], "Expected second cancelled image URL request once second image is not near visible anymore")
+    }
+    
+    func test_feedImageView_doesNotRenderLoadedImageWhenNoVisibleAnymore() {
+        let (sut, loader) = makeSUT()
+        sut.loadViewIfNeeded()
+        loader.completeFeedLoading(with: [makeImage()])
+        
+        let view = sut.simulateFeedImageViewNotVisible(at: 0)
+        loader.completeImageLoading(with: anyImageData())
+        
+        XCTAssertNil(view?.renderedImage, "Expected no rendered image when an image load finishes after the view is not visible anymore")
     }
     
     // MARK: Helper
@@ -280,6 +291,10 @@ final class FeedViewControllerTests: XCTestCase {
         FeedImage(id: UUID(), description: description, location: location, url: url)
     }
     
+    private func anyImageData() -> Data {
+        UIImage.make(withColor: .red).pngData()!
+    } 
+
     class LoaderSpy: FeedLoader, FeedImageDataLoader {
         private var feedRequests = [(FeedLoader.Result) -> Void]()
         
@@ -344,12 +359,14 @@ private extension FeedViewController {
         feedImageView(at: index) as? FeedImageCell
     }
     
-    func simulateFeedImageViewNotVisible(at row: Int) {
+    @discardableResult
+    func simulateFeedImageViewNotVisible(at row: Int) -> FeedImageCell? {
         let view = simulateFeedImageViewVisible(at: row)
         
         let delegate = tableView.delegate
         let index = IndexPath(row: row, section: feedImagesSection)
         delegate?.tableView?(tableView, didEndDisplaying: view!, forRowAt: index)
+        return view
     }
     
     func simulateFeedImageViewNearVisible(at row: Int) {
