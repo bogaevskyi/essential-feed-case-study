@@ -1,5 +1,5 @@
 //
-//  FeedViewControllerTests+LoaderSpy.swift
+//  FeedUIIntegrationTests+LoaderSpy.swift
 //  EssentialFeediOSTests
 //
 //  Created by Andrew Bogaevskyi on 17.07.2022.
@@ -10,7 +10,7 @@ import EssentialFeed
 import EssentialFeediOS
 import XCTest
 
-extension FeedViewControllerTests {
+extension FeedUIIntegrationTests {
     class LoaderSpy: FeedLoader, FeedImageDataLoader {
         private var feedRequests = [(FeedLoader.Result) -> Void]()
         
