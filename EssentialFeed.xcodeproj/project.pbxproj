@@ -183,6 +183,7 @@
 		4997C4052884004F009DDE9A /* UIRefreshControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+TestHelpers.swift"; sourceTree = "<group>"; };
 		4997C4082884008D009DDE9A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Feed.strings; sourceTree = "<group>"; };
 		4997C40A288400C8009DDE9A /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Feed.strings"; sourceTree = "<group>"; };
+		4997C40B28840110009DDE9A /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Feed.strings; sourceTree = "<group>"; };
 		499967C4285E0EFF008A5A9C /* FeedCachePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCachePolicy.swift; sourceTree = "<group>"; };
 		499967C6285F3708008A5A9C /* CodableFeedStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFeedStoreTests.swift; sourceTree = "<group>"; };
 		49BE7DD32845F1B700796552 /* CacheFeedUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheFeedUseCaseTests.swift; sourceTree = "<group>"; };
@@ -694,6 +695,7 @@
 				en,
 				Base,
 				"pt-BR",
+				el,
 			);
 			mainGroup = 37B8FAD826D2D44700D364EC;
 			productRefGroup = 37B8FAE326D2D44700D364EC /* Products */;
@@ -897,6 +899,7 @@
 			children = (
 				4997C4082884008D009DDE9A /* en */,
 				4997C40A288400C8009DDE9A /* pt-BR */,
+				4997C40B28840110009DDE9A /* el */,
 			);
 			name = Feed.strings;
 			sourceTree = "<group>";
