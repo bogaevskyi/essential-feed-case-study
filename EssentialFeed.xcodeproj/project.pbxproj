@@ -56,7 +56,6 @@
 		49AF5974288B111F00CA694B /* FeedErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AF596D288B111F00CA694B /* FeedErrorViewModel.swift */; };
 		49AF5977288B116200CA694B /* FeedImagePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AF5975288B116200CA694B /* FeedImagePresenterTests.swift */; };
 		49AF5978288B116200CA694B /* FeedLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AF5976288B116200CA694B /* FeedLocalizationTests.swift */; };
-		49AF5990288B124900CA694B /* FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AF597A288B124900CA694B /* FeedImageDataLoader.swift */; };
 		49AF5991288B124900CA694B /* FeedViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AF597D288B124900CA694B /* FeedViewAdapter.swift */; };
 		49AF5992288B124900CA694B /* FeedImageDataLoaderPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AF597E288B124900CA694B /* FeedImageDataLoaderPresentationAdapter.swift */; };
 		49AF5993288B124900CA694B /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AF597F288B124900CA694B /* MainQueueDispatchDecorator.swift */; };
@@ -73,6 +72,7 @@
 		49AF599E288B124900CA694B /* UIView+Shimmering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AF598D288B124900CA694B /* UIView+Shimmering.swift */; };
 		49AF599F288B124900CA694B /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AF598E288B124900CA694B /* ErrorView.swift */; };
 		49AF59A0288B124900CA694B /* Feed.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49AF598F288B124900CA694B /* Feed.xcassets */; };
+		49AF59A1288B137800CA694B /* FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AF597A288B124900CA694B /* FeedImageDataLoader.swift */; };
 		49BE7DD42845F1B700796552 /* CacheFeedUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BE7DD32845F1B700796552 /* CacheFeedUseCaseTests.swift */; };
 		49D761E6285865DA003D2867 /* RemoteFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D761E5285865DA003D2867 /* RemoteFeedItem.swift */; };
 		49D761E828586620003D2867 /* LocalFeedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D761E728586620003D2867 /* LocalFeedImage.swift */; };
@@ -347,6 +347,7 @@
 			children = (
 				37B8FAFE26D2D45D00D364EC /* FeedImage.swift */,
 				37B8FB0226D2D51700D364EC /* FeedLoader.swift */,
+				49AF597A288B124900CA694B /* FeedImageDataLoader.swift */,
 			);
 			path = "Feed Feature";
 			sourceTree = "<group>";
@@ -403,7 +404,6 @@
 		49430905286F753C003BB496 /* EssentialFeediOS */ = {
 			isa = PBXGroup;
 			children = (
-				49AF5979288B124900CA694B /* Feed Image Loader */,
 				49AF597B288B124900CA694B /* Feed UI */,
 			);
 			path = EssentialFeediOS;
@@ -483,14 +483,6 @@
 				49AF596D288B111F00CA694B /* FeedErrorViewModel.swift */,
 			);
 			path = "Feed Presentation";
-			sourceTree = "<group>";
-		};
-		49AF5979288B124900CA694B /* Feed Image Loader */ = {
-			isa = PBXGroup;
-			children = (
-				49AF597A288B124900CA694B /* FeedImageDataLoader.swift */,
-			);
-			path = "Feed Image Loader";
 			sourceTree = "<group>";
 		};
 		49AF597B288B124900CA694B /* Feed UI */ = {
@@ -848,6 +840,7 @@
 				3722131F26ED3062009D5385 /* RemoteFeedLoader.swift in Sources */,
 				493B71D82867278B000D9F8C /* CoreDataHelpers.swift in Sources */,
 				49AF5974288B111F00CA694B /* FeedErrorViewModel.swift in Sources */,
+				49AF59A1288B137800CA694B /* FeedImageDataLoader.swift in Sources */,
 				493B71DC286727EB000D9F8C /* CoreDataFeedStore.swift in Sources */,
 				49D761E828586620003D2867 /* LocalFeedImage.swift in Sources */,
 				4956E2382851D3BE009E4AA8 /* FeedStore.swift in Sources */,
@@ -915,7 +908,6 @@
 				49AF599D288B124900CA694B /* UIRefreshControl+Helpers.swift in Sources */,
 				49AF599F288B124900CA694B /* ErrorView.swift in Sources */,
 				49AF5996288B124900CA694B /* FeedLoaderPresentationAdapter.swift in Sources */,
-				49AF5990288B124900CA694B /* FeedImageDataLoader.swift in Sources */,
 				49AF5999288B124900CA694B /* FeedImageCell.swift in Sources */,
 				49AF599B288B124900CA694B /* UIImageView+Animations.swift in Sources */,
 			);
