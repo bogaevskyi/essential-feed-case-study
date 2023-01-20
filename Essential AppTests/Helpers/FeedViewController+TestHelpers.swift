@@ -15,7 +15,7 @@ extension FeedViewController {
 	
 	@discardableResult
 	func simulateFeedImageViewVisible(at index: Int) -> FeedImageCell? {
-		return feedImageView(at: index) as? FeedImageCell
+		feedImageView(at: index) as? FeedImageCell
 	}
 	
 	@discardableResult
@@ -42,26 +42,34 @@ extension FeedViewController {
 		let index = IndexPath(row: row, section: feedImagesSection)
 		ds?.tableView?(tableView, cancelPrefetchingForRowsAt: [index])
 	}
-	
+    
+    func renderedFeedImageData(at index: Int) -> Data? {
+        simulateFeedImageViewVisible(at: index)?.renderedImage
+    }
+
 	var errorMessage: String? {
-		return errorView?.message
+		errorView?.message
 	}
 
 	var isShowingLoadingIndicator: Bool {
-		return refreshControl?.isRefreshing == true
+		refreshControl?.isRefreshing == true
 	}
 	
 	func numberOfRenderedFeedImageViews() -> Int {
-		return tableView.numberOfRows(inSection: feedImagesSection)
+		tableView.numberOfRows(inSection: feedImagesSection)
 	}
 	
 	func feedImageView(at row: Int) -> UITableViewCell? {
+        guard numberOfRenderedFeedImageViews() > row else {
+            return nil
+        }
+        
 		let ds = tableView.dataSource
 		let index = IndexPath(row: row, section: feedImagesSection)
 		return ds?.tableView(tableView, cellForRowAt: index)
 	}
 	
 	private var feedImagesSection: Int {
-		return 0
+		0
 	}
 }
