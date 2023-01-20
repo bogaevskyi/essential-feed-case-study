@@ -17,6 +17,7 @@
 		4911F036288B1CC4001091F1 /* EssentialFeed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4911F033288B1CC4001091F1 /* EssentialFeed.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4911F037288B1CC4001091F1 /* EssentialFeediOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4911F034288B1CC4001091F1 /* EssentialFeediOS.framework */; };
 		4911F038288B1CC4001091F1 /* EssentialFeediOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4911F034288B1CC4001091F1 /* EssentialFeediOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4959986D288C241F006A0596 /* FeedLoaderWithFallbackComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4959986C288C241F006A0596 /* FeedLoaderWithFallbackComposite.swift */; };
 		49C89F8B288C1A48007D5E3A /* FeedLoaderWithFallbackCompositTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C89F8A288C1A48007D5E3A /* FeedLoaderWithFallbackCompositTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		4911F015288B1C2D001091F1 /* Essential AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Essential AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4911F033288B1CC4001091F1 /* EssentialFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EssentialFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4911F034288B1CC4001091F1 /* EssentialFeediOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EssentialFeediOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4959986C288C241F006A0596 /* FeedLoaderWithFallbackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderWithFallbackComposite.swift; sourceTree = "<group>"; };
 		49C89F8A288C1A48007D5E3A /* FeedLoaderWithFallbackCompositTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderWithFallbackCompositTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +111,7 @@
 				4911F00B288B1C2D001091F1 /* Assets.xcassets */,
 				4911F00D288B1C2D001091F1 /* LaunchScreen.storyboard */,
 				4911F010288B1C2D001091F1 /* Info.plist */,
+				4959986C288C241F006A0596 /* FeedLoaderWithFallbackComposite.swift */,
 			);
 			path = "Essential App";
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			files = (
 				4911F007288B1C2D001091F1 /* ViewController.swift in Sources */,
 				4911F003288B1C2D001091F1 /* AppDelegate.swift in Sources */,
+				4959986D288C241F006A0596 /* FeedLoaderWithFallbackComposite.swift in Sources */,
 				4911F005288B1C2D001091F1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
