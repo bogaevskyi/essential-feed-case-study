@@ -25,7 +25,6 @@ class DebuggingSceneDelegate: SceneDelegate {
             return DebuggingHTTPClient(connectivity: connectivity)
         }
         return super.makeRemoteClient()
-        
     }
 }
 
