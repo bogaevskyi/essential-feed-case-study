@@ -28,4 +28,20 @@ class EssentialAppUIAcceptanceTests: XCTestCase {
         let feedImage = app.images.matching(identifier: "feed-image-view").firstMatch
         XCTAssertTrue(feedImage.exists)
     }
+    
+    func test_onLaunch_displaysCachedRemoteFeedWhenCustomerHasNoConnectivity() {
+        let onlineApp = XCUIApplication()
+        onlineApp.launch()
+        
+        
+        let offlineApp = XCUIApplication()
+        offlineApp.launchArguments = ["-connectivity", "offline"]
+        onlineApp.launch()
+        
+        let cachedFeedCells = offlineApp.cells.matching(identifier: "feed-image-cell")
+        XCTAssertEqual(cachedFeedCells.count, 22)
+        
+        let firstCachedImage = offlineApp.images.matching(identifier: "feed-image-view").firstMatch
+        XCTAssertTrue(firstCachedImage.exists)
+    }
 }
