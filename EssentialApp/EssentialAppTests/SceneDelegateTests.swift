@@ -7,7 +7,7 @@
 
 import XCTest
 import EssentialFeediOS
-@testable import Essential_App 
+@testable import EssentialApp 
 
 class SceneDelegateTests: XCTestCase {
 
