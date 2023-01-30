@@ -1,5 +1,5 @@
 //
-//  LoadFeedFromRemoteUseCaseTests.swift
+//  FeedItemsMapperTests.swift
 //  EssentialFeedTests
 //
 //  Created by Andrii Bohaievskyi on 11.09.2021.
