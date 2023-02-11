@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4911C1132997E40B0013473A /* NullStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4911C1122997E40B0013473A /* NullStore.swift */; };
 		4911F003288B1C2D001091F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4911F002288B1C2D001091F1 /* AppDelegate.swift */; };
 		4911F005288B1C2D001091F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4911F004288B1C2D001091F1 /* SceneDelegate.swift */; };
 		4911F00C288B1C2D001091F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4911F00B288B1C2D001091F1 /* Assets.xcassets */; };
@@ -68,6 +69,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4911C1122997E40B0013473A /* NullStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NullStore.swift; sourceTree = "<group>"; };
 		4911EFFF288B1C2D001091F1 /* EssentialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EssentialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4911F002288B1C2D001091F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4911F004288B1C2D001091F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				4911F010288B1C2D001091F1 /* Info.plist */,
 				49599870288C249D006A0596 /* FeedImageDataLoaderWithFallbackComposite.swift */,
 				49ADF8D72990283800BE216E /* CommentsUIComposer.swift */,
+				4911C1122997E40B0013473A /* NullStore.swift */,
 			);
 			path = EssentialApp;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 			files = (
 				49895F1A289BAAEC00900629 /* FeedUIComposer.swift in Sources */,
 				49895F18289BAAEC00900629 /* WeakRefVirtualProxy.swift in Sources */,
+				4911C1132997E40B0013473A /* NullStore.swift in Sources */,
 				4911F003288B1C2D001091F1 /* AppDelegate.swift in Sources */,
 				49895F19289BAAEC00900629 /* FeedViewAdapter.swift in Sources */,
 				49ADF8D82990283800BE216E /* CommentsUIComposer.swift in Sources */,
