@@ -1,5 +1,5 @@
 //
-//  CoreDataFeedStore.swift
+//  CoreDataFeedStore+FeedImageDataStore.swift
 //  EssentialFeediOS
 //
 //  Created by Andrew Bogaevskyi on 24.07.2022.
